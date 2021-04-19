@@ -34,6 +34,7 @@ if ($conn->connect_error) {
 echo "Connected to MySQL successfully!";
 echo "<br><br>";
 
+$conn->query("CREATE TABLE login_data (email varchar(50), password varchar(50))");
 $res = $conn->query("Select email, password from login_data");
 
 for ($row_no = 0; $row_no < $res->num_rows; $row_no++) {

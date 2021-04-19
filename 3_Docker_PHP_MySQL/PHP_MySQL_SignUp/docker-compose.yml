@@ -3,7 +3,7 @@ services:
   php:
     build: 
       context: .
-    image: harsh/php-mysql-demo:1.0.0
+    image: harshsiddhapura/php-mysql-demo:1.0.0
     networks:
       - frontend
       - backend
@@ -24,7 +24,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
       - MYSQL_USER=user
-      - MYSQL_PASSWORD=password
+      - MYSQL_PASSWORD=password 
       - MYSQL_DATABASE=database
     container_name: mysql-app
   phpmyadmin:
